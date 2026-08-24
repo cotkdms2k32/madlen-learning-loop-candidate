@@ -2,6 +2,10 @@
 
 A focused AI-powered prototype for one connected learning lifecycle:
 
+**Live prototype:** https://madlen-learning-loop-candidate.netlify.app
+
+**Source repository:** https://github.com/cotkdms2k32/madlen-learning-loop-candidate
+
 - **Before class:** Lesson Prep Assistant
 - **During learning:** Student Chatbot
 - **After learning:** Essay Grader
