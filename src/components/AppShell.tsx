@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BookOpenText, GraduationCap, House, MessageCircleMore, Sparkles } from "lucide-react";
@@ -18,14 +19,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <div className="app-shell">
       <header className="site-header">
         <Link href="/" className="brand" aria-label="Madlen Learning Loop home">
-          <span className="brand-mark" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </span>
           <span className="brand-copy">
-            <strong>Madlen Learning Loop</strong>
-            <small>Candidate Prototype</small>
+            <Image
+              className="brand-logo"
+              src="/madlen-logo.svg"
+              alt="Madlen"
+              width={140}
+              height={32}
+              priority
+            />
+            <small>Candidate Prototype · Learning Loop</small>
           </span>
         </Link>
         <div className="prototype-pill">

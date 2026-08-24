@@ -92,39 +92,15 @@ button:disabled {
   gap: 12px;
 }
 
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  background: var(--orange-600);
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  gap: 2px;
-  padding: 9px 8px;
-  box-shadow: 0 8px 20px rgba(200, 92, 29, 0.2);
-}
-
-.brand-mark span {
-  width: 6px;
-  border: 2px solid #fff8ed;
-  border-radius: 7px 7px 4px 4px;
-  transform-origin: bottom;
-}
-
-.brand-mark span:first-child { height: 18px; transform: rotate(-13deg); }
-.brand-mark span:nth-child(2) { height: 22px; }
-.brand-mark span:last-child { height: 18px; transform: rotate(13deg); }
-
 .brand-copy {
   display: grid;
   line-height: 1.08;
 }
 
-.brand-copy strong {
-  font-family: "Fraunces", serif;
-  font-size: 18px;
-  letter-spacing: -0.02em;
+.brand-logo {
+  width: 140px;
+  height: auto;
+  display: block;
 }
 
 .brand-copy small {
