@@ -4,6 +4,7 @@ import { FormEvent, useRef, useState } from "react";
 import { ArrowUp, Lightbulb, MessageCircleMore, RotateCcw, ShieldCheck } from "lucide-react";
 import { ErrorNotice, GradeSelect, ModuleIntro } from "@/components/Ui";
 import { AppApiError, postJson } from "@/lib/client";
+import { contentLanguageName, type ContentLocale } from "@/lib/language";
 import type { ChatResponse } from "@/lib/schemas";
 
 type UiMessage = {
@@ -13,14 +14,21 @@ type UiMessage = {
   answer?: ChatResponse;
 };
 
+const chatLabels = {
+  en: { you: "You", hint: "Hint", ofThree: "of 3" },
+  tr: { you: "Sen", hint: "İpucu", ofThree: "/ 3" },
+} as const;
+
 export default function ChatPage() {
   const [topic, setTopic] = useState("Fractions");
   const [gradeLevel, setGradeLevel] = useState("Grade 5");
   const [draft, setDraft] = useState("");
   const [messages, setMessages] = useState<UiMessage[]>([]);
+  const [contentLocale, setContentLocale] = useState<ContentLocale>("en");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<AppApiError | null>(null);
   const lastQuestion = useRef("");
+  const labels = chatLabels[contentLocale];
 
   async function sendMessage(event?: FormEvent, retryText?: string) {
     event?.preventDefault();
@@ -39,11 +47,12 @@ export default function ChatPage() {
 
     try {
       const apiMessages = nextMessages.slice(-9).map(({ role, content }) => ({ role, content }));
-      const payload = await postJson<{ answer: ChatResponse }>("/api/chat", {
+      const payload = await postJson<{ answer: ChatResponse; locale: ContentLocale }>("/api/chat", {
         topic,
         gradeLevel,
         messages: apiMessages,
       });
+      setContentLocale(payload.locale);
       const assistantMessage: UiMessage = {
         id: crypto.randomUUID(),
         role: "assistant",
@@ -62,6 +71,7 @@ export default function ChatPage() {
     setMessages([]);
     setError(null);
     setDraft("");
+    setContentLocale("en");
   }
 
   return (
@@ -89,7 +99,7 @@ export default function ChatPage() {
       <div className="chat-frame">
         <div className="chat-trustbar">
           <span><ShieldCheck size={16} /> Teacher-guided learning space</span>
-          <span>No personal information, please.</span>
+          <span>{messages.length > 0 ? `Content language · ${contentLanguageName(contentLocale)}` : "No personal information, please."}</span>
         </div>
         <div className="messages" aria-live="polite">
           {messages.length === 0 && (
@@ -104,10 +114,10 @@ export default function ChatPage() {
             </div>
           )}
           {messages.map((message) => (
-            <article key={message.id} className={`message ${message.role}`}>
-              <span className="message-author">{message.role === "user" ? "You" : "Loop Guide"}</span>
+            <article key={message.id} className={`message ${message.role}`} lang={contentLocale}>
+              <span className="message-author">{message.role === "user" ? labels.you : "Loop Guide"}</span>
               {message.answer?.mode === "guided_practice" && (
-                <span className="hint-label"><Lightbulb size={13} /> Hint {Math.max(message.answer.hintLevel, 1)} of 3</span>
+                <span className="hint-label"><Lightbulb size={13} /> {labels.hint} {Math.max(message.answer.hintLevel, 1)} {labels.ofThree}</span>
               )}
               {message.content.split("\n").map((line, index) => line ? <p key={`${message.id}-${index}`}>{line}</p> : null)}
             </article>

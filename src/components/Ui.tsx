@@ -83,7 +83,15 @@ export function ErrorNotice({
   );
 }
 
-export function CopyButton({ text, label = "Copy" }: { text: string; label?: string }) {
+export function CopyButton({
+  text,
+  label = "Copy",
+  copiedLabel = "Copied",
+}: {
+  text: string;
+  label?: string;
+  copiedLabel?: string;
+}) {
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
@@ -95,7 +103,7 @@ export function CopyButton({ text, label = "Copy" }: { text: string; label?: str
   return (
     <button type="button" className="button button-secondary" onClick={handleCopy}>
       {copied ? <Check size={16} aria-hidden="true" /> : <Clipboard size={16} aria-hidden="true" />}
-      {copied ? "Copied" : label}
+      {copied ? copiedLabel : label}
     </button>
   );
 }

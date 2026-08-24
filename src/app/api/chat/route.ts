@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import { generateStructured } from "@/lib/groq";
+import { generateStructured, ProviderError } from "@/lib/groq";
 import { handleApiError, invalidInput, rateLimit } from "@/lib/http";
+import { contentLanguageInstruction, detectContentLocale } from "@/lib/language";
 import { studentSystemPrompt } from "@/lib/prompts";
 import {
   chatJsonSchema,
@@ -20,6 +21,9 @@ export async function POST(request: Request) {
       return invalidInput("Choose a topic and grade level, then enter a question.");
     }
 
+    const locale = detectContentLocale(
+      `${input.data.topic}\n${input.data.messages.map(({ content }) => content).join("\n")}`,
+    );
     const answer = await generateStructured({
       name: "student_guidance",
       schema: chatJsonSchema,
@@ -28,13 +32,17 @@ export async function POST(request: Request) {
       messages: [
         {
           role: "system",
-          content: `${studentSystemPrompt}\nSelected topic: ${input.data.topic}\nSelected grade: ${input.data.gradeLevel}`,
+          content: `${studentSystemPrompt}\n${contentLanguageInstruction(locale)}\nSelected topic: ${input.data.topic}\nSelected grade: ${input.data.gradeLevel}`,
         },
         ...input.data.messages,
       ],
     });
 
-    return NextResponse.json({ answer });
+    if (detectContentLocale(`${answer.reply}\n${answer.checkForUnderstanding}`) !== locale) {
+      throw new ProviderError("The AI response did not match the requested language.", 502, true);
+    }
+
+    return NextResponse.json({ answer, locale });
   } catch (error) {
     return handleApiError(error);
   }

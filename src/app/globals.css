@@ -503,6 +503,7 @@ textarea::placeholder { color: #9a9085; }
 .result-muted { opacity: 0.55; pointer-events: none; }
 .result-heading { display: flex; justify-content: space-between; align-items: start; gap: 20px; }
 .result-heading h2 { margin: 6px 0 0; font-family: "Fraunces", serif; font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.035em; }
+.language-note { display: inline-block; margin-top: 9px; color: var(--ink-500); font-size: 11px; font-weight: 700; letter-spacing: 0.02em; }
 
 .content-card,
 .two-column-card,
