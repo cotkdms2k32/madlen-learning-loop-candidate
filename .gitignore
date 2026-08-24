@@ -1,0 +1,11 @@
+# Local environment files may contain secrets.
+.env*
+!.env.example
+
+# Build, dependency, test, and local scratch output.
+node_modules/
+.next/
+coverage/
+tmp/
+*.tsbuildinfo
+.netlify/
