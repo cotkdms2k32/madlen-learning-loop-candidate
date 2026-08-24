@@ -252,10 +252,14 @@ def markdown_flowables(path: Path, styles, available_width: float, include_socia
         if stripped.startswith("## "):
             heading = stripped[3:]
             if re.match(r"[1-5]\.", heading):
-                story.append(PageBreak())
+                story.append(CondPageBreak(220 * mm))
             else:
                 story.append(CondPageBreak(35 * mm))
             story.append(Paragraph(inline_markup(heading), styles["h2"]))
+            i += 1
+            continue
+        if stripped.startswith("#### "):
+            story.append(Paragraph(inline_markup(stripped[5:]), styles["h3"]))
             i += 1
             continue
         if stripped.startswith("### "):
@@ -304,7 +308,7 @@ def markdown_flowables(path: Path, styles, available_width: float, include_socia
             paragraph_lines.append(candidate)
             i += 1
         text = " ".join(paragraph_lines)
-        style = styles["quote"] if text.startswith("**Madlen brings") else styles["body"]
+        style = styles["quote"] if text.startswith("**Madlen turns") else styles["body"]
         story.append(Paragraph(inline_markup(text), style))
     return story
 
@@ -365,7 +369,7 @@ def build_case_pdf():
         Paragraph("GROWTH INTERN CASE STUDY", styles["h3"]),
         Paragraph("A defensible growth story,<br/>made tangible.", styles["cover_title"]),
         Paragraph(
-            "Competitive analysis · Unique value proposition · One Outcome, One Learning Loop pilot · "
+            "Competitive analysis · Unique value proposition · 30-Day Classroom Proof Pilot · "
             "AI mini-product prototype · PYP Unit Planner social campaign",
             styles["cover_subtitle"],
         ),

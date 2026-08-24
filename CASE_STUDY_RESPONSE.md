@@ -4,7 +4,7 @@
 
 Madlen should not compete by claiming the longest list of AI tools. MagicSchool already owns breadth, while Brisk owns the promise of working inside tools teachers already use. Madlen's more defensible position is a coherent, curriculum-aware learning journey: one learning outcome connects planning, student activity, assessment, and the teacher's next action.
 
-The recommended growth initiative is a 30-day, school-sponsored proof pilot called **One Outcome, One Learning Loop**. It turns that positioning into observable product behaviour and a decision-ready impact report instead of asking prospects to believe another general AI productivity claim.
+The recommended growth initiative is the **Madlen 30-Day Classroom Proof Pilot**, supported by the campaign line **One Outcome. One Learning Loop.** Instead of asking a school to trust another AI demo, the pilot lets it test one real learning objective across planning, student activity, and feedback, then make a purchasing decision using evidence from its own teachers and curriculum.
 
 ## 1. Competitive analysis
 
@@ -35,22 +35,35 @@ The competitive opening is not that Brisk lacks curriculum capability. Its Premi
 
 ## 2. Unique value proposition - maximum two sentences
 
-**Madlen brings the whole learning journey together - from preparing a lesson to understanding what each student needs next. It adapts that journey to the curriculum a school actually teaches, giving teachers back time and students more purposeful support.**
+**Madlen turns one learning objective into a curriculum-aligned lesson, guided student practice, and teacher-reviewed feedback in one connected workflow. Teachers save time, schools reduce fragmented AI use, and every output remains editable and under educator control.**
 
 ### Why this wording
 
-- **Primary audience:** teachers experience the workload; academic leaders decide whether the result is consistent and scalable.
-- **Outcome before technology:** it explains what improves without asking a non-technical reader to understand models, prompts, or analytics architecture.
-- **Defensible difference:** “together” describes the connected workflow; “curriculum a school actually teaches” makes relevance concrete without claiming exclusive IB ownership.
-- **Counterargument - competitors also connect workflows:** true. The UVP becomes credible only when a demo preserves the same outcome across planning, student activity, and feedback and shows the relevant framework structure with little setup.
+- **Problem made explicit:** teachers often move between disconnected AI tools, while school leaders cannot see whether those tools create a consistent learning process.
+- **Outcome before technology:** the statement explains the teacher and school benefit without requiring the reader to understand models, prompts, or analytics architecture.
+- **Defensible difference:** the same learning objective continues through planning, student support, and teacher-reviewed feedback; curriculum fit and teacher control keep the promise credible.
+- **Counterargument - competitors also connect workflows:** true. Madlen must prove that the same outcome survives all three stages with little setup; the pilot below is designed to create that proof.
 
-## 3. Strategic initiative: One Outcome, One Learning Loop
+## 3. Strategic initiative: Madlen 30-Day Classroom Proof Pilot
+
+**Campaign line:** One Outcome. One Learning Loop.
 
 **Initiative type:** targeted go-to-market pilot campaign, not a new dashboard or an open-ended free trial.
 
+### The idea in plain language
+
+| Question | Clear answer |
+| --- | --- |
+| What problem are we solving? | School leaders see impressive AI demos but still cannot tell whether teachers will use the product consistently, whether it fits their curriculum, or whether it creates measurable value. |
+| What is the initiative? | A school tests one real learning objective with 5-10 teachers for 30 days, from lesson preparation to student activity and teacher-reviewed feedback. |
+| What does the school receive? | A one-page evidence report showing adoption, time saved, student participation, teacher edits, and curriculum-fit issues. |
+| What opportunity does this create for Madlen? | It turns a generic product demo into credible purchase evidence, identifies serious buyers, and creates reusable school proof stories. |
+
+**Core value:** Madlen turns a product demo into evidence a school can use to make a confident purchasing decision.
+
 ### Objective
 
-Convert Madlen's integrated-lifecycle positioning into adoption evidence and qualified school opportunities. In 30 days, each participating teacher should complete one measurable loop around a single learning outcome: prepare a lesson, run a guided student activity, review aligned evidence, and decide the next instructional step.
+Reduce the uncertainty that slows school adoption. In 30 days, each participating teacher should complete one measurable loop around a single learning outcome: prepare a lesson, run a guided student activity, review aligned evidence, and decide the next instructional step. Madlen then uses the results to qualify the school's next purchase or expansion conversation.
 
 ### Target audience and selection
 
@@ -82,16 +95,23 @@ These assets are deliberately lighter than building a new analytics product. The
 
 Targets below are pilot hypotheses, not forecasts. They create a decision standard before results are known.
 
+#### Three primary growth signals
+
+| Metric | Exact definition | Initial target | Decision it informs |
+| --- | --- | ---: | --- |
+| Teacher activation | Invited teachers completing a plan plus student activity within 7 days | >=70% | Is setup understandable and fast? |
+| Full-loop completion | Activated teachers completing all three stages within 30 days | >=50% | Is the lifecycle real rather than a feature-list story? |
+| Pilot-to-next-step | Schools requesting proposal or expanded pilot / completed pilots | >=30% | Does product evidence create a growth outcome? |
+
+#### Supporting quality and learning checks
+
 | Metric | Exact definition | Initial target | Decision it informs |
 | --- | --- | ---: | --- |
 | Qualified pilot rate | Sponsor-approved pilots / qualified school conversations | >=25% | Is the proposition compelling to buyers? |
-| Teacher activation | Invited teachers completing a plan plus student activity within 7 days | >=70% | Is setup understandable and fast? |
-| Full-loop completion | Activated teachers completing all three stages within 30 days | >=50% | Is the lifecycle real rather than a feature-list story? |
 | Median time saved | Baseline estimate minus reported actual time for the same loop | >=90 min | Is value meaningful enough to continue testing? |
 | Student activity completion | Students completing the assigned activity / students assigned | >=65% | Does value reach students, not only planning? |
 | Teacher usefulness | Teachers rating the completed loop 8-10 on a 10-point scale | >=60% | Is there an early retention signal? |
 | Serious alignment correction rate | Outputs needing a material curriculum/level correction / reviewed outputs | <=15% | Is framework fidelity credible? |
-| Pilot-to-next-step | Schools requesting proposal or expanded pilot / completed pilots | >=30% | Does product evidence create a growth outcome? |
 
 ### Likely objections and responses
 
@@ -143,6 +163,8 @@ The candidate prototype demonstrates the interaction concept; it deliberately do
 
 Turn a transdisciplinary theme and central idea into editable, bilingual lines of inquiry and guiding questions.
 
+**Theme + central idea → Editable bilingual unit plan**
+
 PYP-aligned · Bilingual output · Editable plan
 
 **See PYP planning in action →**
@@ -159,7 +181,7 @@ See PYP planning in action with Madlen.
 
 ### Why this creative
 
-The previous learning-loop concept communicated the strategy but did not satisfy the brief's “one core tool” requirement. PYP Unit Planner was selected because it is a real public Madlen tool and a concrete proof point for the curriculum-fit differentiation. The generated paper-planner illustration communicates inquiry and connected ideas without a generic AI robot or developer dashboard. Exact copy and the official Madlen logo were added deterministically rather than generated by AI, preventing brand or spelling errors.
+The previous learning-loop concept communicated the strategy but did not satisfy the brief's “one core tool” requirement. PYP Unit Planner was selected because it is a real public Madlen tool and a concrete proof point for the curriculum-fit differentiation. The input-to-output line makes the product mechanism understandable at a glance, while the paper-planner illustration communicates inquiry without using a generic AI robot or developer dashboard. Exact copy and the official Madlen logo were added deterministically rather than generated by AI, preventing brand or spelling errors.
 
 **Counterargument - the tool is relevant to a narrower audience:** true, but narrow relevance improves message clarity and lead quality. A broad “AI for every task” post would recreate the undifferentiated toolbox problem identified in the competitor analysis.
 

@@ -4,7 +4,7 @@
 
 I built the three requested products as one learning lifecycle - lesson preparation before class, guided student support during learning, and essay feedback after learning - because Madlen's value is easier to understand as a connected teacher outcome than as three unrelated AI demos. Each module still works independently.
 
-The interface uses Madlen's official logo and a restrained cream, orange, and sage system to feel calm and familiar to non-technical educators. Navigation, controls, and system states are English because the case and Madlen's public product are English-first. Generated learning content and its result labels switch together between English and Turkish; mismatched-language model responses are rejected. Copy actions reduce rework, progressive hint labels make the chatbot's pedagogy visible, and essay scores remain advisory with a clear teacher-review warning.
+The interface uses Madlen's official logo and a restrained cream, orange, and sage system to feel calm and familiar to non-technical educators. Navigation, controls, and system states are English because the case brief is in English and the primary reviewer is Madlen's hiring team. Generated learning content and its result labels follow the teacher's input language together; mismatched-language model responses are rejected. Copy actions reduce rework, progressive hint labels make the chatbot's pedagogy visible, and essay scores remain advisory with a clear teacher-review warning.
 
 ## AI and technical tools used
 

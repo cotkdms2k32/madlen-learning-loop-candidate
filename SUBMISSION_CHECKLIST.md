@@ -16,7 +16,7 @@
 | Strengths and weaknesses for each | Features, brand, UX, pricing, reputation, and strategic openings | Complete |
 | Balanced and critical perspective | Explicit claim limits and competitor counterarguments | Complete |
 | UVP in no more than two sentences | Two-sentence bold statement | Complete |
-| One strategic initiative | 30-day “One Outcome, One Learning Loop” go-to-market pilot | Complete |
+| One strategic initiative | Madlen 30-Day Classroom Proof Pilot; “One Outcome. One Learning Loop.” campaign line | Complete |
 | Initiative objective | Adoption evidence and qualified school opportunities | Complete |
 | Success metrics | Eight defined metrics with targets and decisions | Complete |
 | Lesson Prep Assistant | Topic/grade to outline, objectives, key concepts, exactly five slides, 2-3 questions | Complete |
