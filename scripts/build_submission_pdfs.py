@@ -396,11 +396,6 @@ def build_case_pdf():
                 ]
             ),
         ),
-        Spacer(1, 17 * mm),
-        Paragraph(
-            "Core recommendation: compete on a curriculum-aware learning journey, not on tool count.",
-            styles["quote"],
-        ),
         PageBreak(),
     ]
     story.extend(markdown_flowables(CASE_MD, styles, A4[0] - 2 * margin, include_social=True))

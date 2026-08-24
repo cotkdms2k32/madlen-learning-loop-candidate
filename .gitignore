@@ -7,5 +7,6 @@ node_modules/
 .next/
 coverage/
 tmp/
+__pycache__/
 *.tsbuildinfo
 .netlify/
