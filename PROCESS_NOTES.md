@@ -1,34 +1,23 @@
-# Process Notes — Madlen Learning Loop
+# Process Notes - Madlen Learning Loop
 
-## Major product and UX decisions
+## Decisions and deliberate UX
 
-I treated the three requested tools as one learning loop rather than three unrelated demos: prepare before class, guide during learning, and review after learning. Each module still works on its own, but shares one calm navigation, vocabulary, visual system, and teacher-review posture. The navigation, forms, system states, and prototype framing are English because the case and Madlen's current public product are English-first. The learning workspace follows the user's content language: generated text, result-section labels, rubric names, hint labels, and copied exports switch together between English and Turkish. The server also rejects a model response when its language does not match the input, preventing mixed-language feedback from being displayed.
+I built the three requested products as one learning lifecycle - lesson preparation before class, guided student support during learning, and essay feedback after learning - because Madlen's value is easier to understand as a connected teacher outcome than as three unrelated AI demos. Each module still works independently.
 
-The MVP intentionally has no accounts, database, saved history, admin area, or automatic curriculum selector. Those additions would consume the deadline without improving the three review tasks. Teacher-facing outputs are structured for scanning and copying. Student chat is not a generic answer bot: practice requests trigger up to three progressive hints and a check-for-understanding question. Essay feedback always uses four named criteria, must include both a strength and an improvement, and only displays passage quotations that exist verbatim in the pasted essay.
+The interface uses Madlen's official logo and a restrained cream, orange, and sage system to feel calm and familiar to non-technical educators. Navigation, controls, and system states are English because the case and Madlen's public product are English-first. Generated learning content and its result labels switch together between English and Turkish; mismatched-language model responses are rejected. Copy actions reduce rework, progressive hint labels make the chatbot's pedagogy visible, and essay scores remain advisory with a clear teacher-review warning.
 
 ## AI and technical tools used
 
-- **Groq API + `openai/gpt-oss-120b`:** runtime generation. Chosen because Groq offers a no-cost developer tier and this production model supports strict JSON-schema structured outputs. It is called only from Next.js server routes.
-- **Zod + strict JSON Schema:** validates both user inputs and model responses before rendering. This protects exact requirements such as five slides and four unique criteria.
-- **Next.js + TypeScript:** one responsive application with server routes, typed contracts, and straightforward Netlify deployment.
-- **Codex:** implementation, prompt iteration, research synthesis, test creation, build checks, and browser-based end-to-end QA.
-- **Web research:** checked Madlen, MagicSchool, Brisk, Groq and Netlify claims against current first-party pages rather than relying on memory.
-- **Image generation:** used only for the required static social post, not the product UI, so the application stays fast and reproducible.
+- **Groq API + `openai/gpt-oss-120b`:** live lesson, chat, and essay generation; selected for a zero-cost tier and strict JSON-schema output.
+- **Codex:** implementation, prompt iteration, research synthesis, tests, build checks, deployment support, and browser-based end-to-end QA.
+- **OpenAI image generation:** created the paper-planner illustration for the social post. Exact copy and the official logo were added separately to prevent AI spelling or brand errors.
+- **Web research:** checked Madlen, MagicSchool, Brisk, Groq, and Netlify claims against current sources.
+- **Next.js, TypeScript, Zod:** one responsive application, server-only API calls, bounded inputs, and validation of both user input and model output.
 
 ## Real changes during development
 
-The first architecture sketch considered a Groq SDK and a second-provider fallback. I replaced the SDK with a small native `fetch` client to reduce dependencies, and postponed Gemini failover because a second provider adds another secret, data path and response format to validate. Instead, the MVP bounds context/output length, rate-limits demo traffic, classifies provider errors, and preserves inputs for retry.
+I replaced a planned Groq SDK with native server-side `fetch` to reduce dependencies. I considered automatic Gemini fallback but kept one provider because a second secret, data path, and response contract would need equivalent validation; the UI instead preserves input and offers retry. Deployment moved from an initial Vercel route to Netlify when Netlify provided the clearer free public path for this repository. Live testing also led to exact essay-quotation checks, bilingual output validation, and a social-post pivot from the broad Learning Loop concept to the brief-compliant PYP Unit Planner.
 
-I also strengthened the essay flow after live testing: beyond schema validation, the server now rejects invented quotations by checking every returned passage against the submitted essay. The rubric validator rejects duplicate criteria and requires both positive and improvement feedback.
+## Remaining limitations and next step
 
-## Remaining limitations
-
-- No persistence: refresh clears generated work and conversations.
-- No real school/user controls, shared rate-limit store, audit log, or moderation dashboard.
-- Grade adaptation and pedagogical quality still depend on model behaviour; educator review remains necessary.
-- “Curriculum alignment” is not claimed in this prototype because no curriculum source, standard identifier or retrieval layer is supplied.
-- The free Groq quota is appropriate for review traffic, not guaranteed classroom-scale concurrency.
-
-## What to improve next
-
-First validate the loop with 5–10 teachers: can they complete all three stages, how much time is saved, and where do they edit AI output? If evidence is positive, add curriculum-grounded generation with cited standards, teacher-controlled chat guardrails, saved/exportable work, and a provider adapter that can be deliberately switched to Gemini after equivalent safety and output tests.
+This is a review-scale prototype: there is no authentication, persistence, shared rate-limit store, school administration, or curriculum retrieval layer. Groq's free quota is not classroom-scale capacity, and AI output still requires educator review. Next, test the full loop with 5-10 teachers; if completion, usefulness, and alignment quality meet the pilot thresholds, add cited curriculum sources, saved/exportable work, school controls, and a deliberately tested provider fallback.

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1080, initial-scale=1" />
+    <title>Madlen PYP Unit Planner Social Post</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1080px; overflow: hidden; }
+      body { background: #f7f0e5; zoom: 1.25; }
+      .post {
+        position: relative;
+        width: 1080px;
+        height: 1080px;
+        overflow: hidden;
+        color: #27251f;
+        background: #f7f0e5 url("/social/pyp-unit-planner-illustration.png") center/cover no-repeat;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .wash {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(108deg, rgba(250,246,237,.99) 0%, rgba(250,246,237,.96) 36%, rgba(250,246,237,.50) 57%, rgba(250,246,237,.04) 78%),
+          linear-gradient(180deg, rgba(250,246,237,.78) 0%, rgba(250,246,237,0) 30%);
+      }
+      .frame { position: absolute; inset: 34px; border: 1.5px solid rgba(194,84,27,.35); border-radius: 28px; }
+      .content { position: absolute; inset: 68px; width: 600px; display: flex; flex-direction: column; align-items: flex-start; }
+      .brand { width: 210px; height: auto; margin-bottom: 64px; }
+      .tool-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 17px;
+        border: 1px solid rgba(194,84,27,.33);
+        border-radius: 999px;
+        color: #b64f19;
+        background: rgba(255,250,242,.78);
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: .11em;
+      }
+      .tool-label::before { content: "✦"; font-size: 17px; }
+      h1 {
+        margin: 30px 0 22px;
+        max-width: 600px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 76px;
+        font-weight: 500;
+        line-height: .99;
+        letter-spacing: -.052em;
+      }
+      h1 em { display: block; color: #c2541b; font-style: normal; }
+      .promise { margin: 0; width: 545px; color: #4f4a40; font-size: 25px; line-height: 1.42; }
+      .features { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; width: 580px; }
+      .features span { padding: 10px 13px; border-radius: 10px; background: rgba(222,231,216,.88); color: #3f5a44; font-size: 16px; font-weight: 700; }
+      .cta {
+        margin-top: auto;
+        display: inline-flex;
+        align-items: center;
+        min-height: 58px;
+        padding: 0 22px;
+        border-radius: 13px;
+        color: #fff;
+        background: #475f48;
+        box-shadow: 0 12px 26px rgba(58,76,58,.18);
+        font-size: 18px;
+        font-weight: 800;
+      }
+      .note { position: absolute; right: 62px; bottom: 48px; color: rgba(39,37,31,.62); font-size: 13px; font-weight: 700; letter-spacing: .05em; }
+    </style>
+  </head>
+  <body>
+    <main class="post" aria-label="Madlen PYP Unit Planner social media creative">
+      <div class="wash"></div>
+      <div class="frame"></div>
+      <section class="content">
+        <img class="brand" src="/public/madlen-logo.svg" alt="Madlen" />
+        <div class="tool-label">PYP UNIT PLANNER</div>
+        <h1>Plan the inquiry.<em>Not the paperwork.</em></h1>
+        <p class="promise">Turn a transdisciplinary theme and central idea into editable, bilingual lines of inquiry and guiding questions.</p>
+        <div class="features">
+          <span>PYP-aligned</span>
+          <span>Bilingual output</span>
+          <span>Editable plan</span>
+        </div>
+        <div class="cta">See PYP planning in action →</div>
+      </section>
+      <div class="note">SAMPLE SOCIAL CREATIVE · CANDIDATE CASE STUDY</div>
+    </main>
+  </body>
+</html>

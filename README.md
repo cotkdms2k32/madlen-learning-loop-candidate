@@ -78,10 +78,14 @@ src/lib/schemas.ts       Input/output contracts and JSON schemas
 src/lib/prompts.ts       Pedagogical system instructions
 src/lib/groq.ts          Server-only Groq client
 src/lib/http.ts          Safe errors and lightweight rate limiting
+src/lib/language.ts      English/Turkish content-language policy and checks
 src/lib/schemas.test.ts  Representative validation tests
+src/lib/language.test.ts Representative language-detection checks
 CASE_STUDY_RESPONSE.md   Competitive, value proposition and growth response
 PROCESS_NOTES.md         Concise development record and limitations
-social/                  Static social post deliverable
+social/                  PYP Unit Planner social creative and source assets
+output/pdf/              Polished strategic response and one-page process PDF
+scripts/                 Reproducible PDF builder
 ```
 
 ## Security note
